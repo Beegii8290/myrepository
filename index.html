@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            position:block;
+            margin:auto;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .score{
+            margin-top: 45px;
+            width: 600px;
+            height: 100px;
+            background-color:yellow;
+            color: black;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            font-size: 5rem;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .WonCount{
+            background-color: coral;
+            width: 50px;
+            height: 100px;
+        }
+        .modal{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.5);
+            gap: 0.5rem;
+        }
+        /*.model{
+            position:fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.5);
+            gap: 0.5rem;
+        }
+        .model button{
+            cursor: pointer;
+            border: none;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: 0.2s ease-in-out;
+        }*/
+        .modal button{
+            cursor: pointer;
+            border: none;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: 0.2s ease-in-out;
+        }
+        .modal button:hover{
+            transform: scale(1.05);
+        }
+        .primary{
+            background-color: #4471E6;
+            color: white;
+            font-size: 1.5rem;
+            
+        }
+        .hidden{
+            display: none;
+        }
+        
+/*<div class="model">
+        <button class="primary hidden" id="Easy" >Easy</button>
+        <button class="primary hidden" id="Hard" >Hard</button>
+    </div>*/
+    </style>
+</head>
+<body>
+    <span class="score">
+        <span id="wonCount" class="WonCount"></span>
+        <span id="first">0</span>
+        <span>:</span>
+        <span id="second">0</span>
+        <span id="wonCount1" class="WonCount"></span>
+    </span>
+    <div class="modal">
+        <button class="primary" id="playBtn">1Player</button>
+        <button class="primary" id="secBtn">2Player</button>
+    </div>
+    
+    <canvas id="pong" width="600" height="400"></canvas>
+    <script src="test.js"></script>
+</body>
+</html>
